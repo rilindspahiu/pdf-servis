@@ -93,37 +93,7 @@
             <div class="bg-red-300 h-px"></div>
             
 <div class="grid grid-cols-3 gap-2 py-2">
-    {
-        data.photos && data.photos.length
-            ? data.photos.map((photo, index) => `
-                <div class="bg-white rounded-lg overflow-hidden shadow">
-                    <img
-                        src="{
-                            typeof photo === 'object'
-                                ? (photo.image_url || photo.path || '')
-                                : photo
-                        }"
-                        alt="Bild"
-                        class="w-full h-40 object-cover"
-                    />
-
-                    <div class="p-2 text-center">
-                        <h3 class="text-xs text-gray-500 text-left">
-                            {
-                                typeof photo === 'object'
-                                    ? (photo.title || 'Bild')
-                                    : 'Bild'
-                            } {index + 1}
-                        </h3>
-                    </div>
-                </div>
-            `).join('')
-            : `
-                <div class="col-span-3 text-center text-gray-500 py-4">
-                    Keine Fotos vorhanden
-                </div>
-            `
-    }
+    {{photos_grid}}
 </div>
 
         </div>
