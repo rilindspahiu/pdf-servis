@@ -1,9 +1,14 @@
 const { chromium } = require("playwright");
 
 async function generatePDF(html) {
-    const browser = await chromium.launch({
-        args: ["--no-sandbox", "--disable-setuid-sandbox"]
-    });
+const browser = await chromium.launch({
+    headless: true,
+    args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+    ]
+});
+    
 
     const page = await browser.newPage();
 
