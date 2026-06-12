@@ -25,7 +25,7 @@ function renderTemplate(templateName, data) {
                         alt="${title}"
                         class="w-full h-40 object-cover"
                     />
-                    <div class="p-2 text-center">
+                    <div class="p-2 text-center" style="font-family: 'Nunito', sans-serif;">
                         <h3 class="text-xs text-gray-500 text-left">
                             ${title} ${index + 1}
                         </h3>
@@ -35,7 +35,7 @@ function renderTemplate(templateName, data) {
         }).join('');
     } else {
         photosHtml = `
-            <div class="col-span-3 text-center text-gray-500 py-4">
+            <div class="col-span-3 text-center text-gray-500 py-4" style="font-family: 'Nunito', sans-serif;">
                 Keine Fotos vorhanden
             </div>
         `;
