@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bericht SB-2026-0102</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="pdf" class="max-w-[800px]" style="font-family: 'Nunito', sans-serif;">
+        <!-- Header -->
+        <div class="flex flex-row justify-between">
+            <img src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg" width="400px" />
+            <div class="flex flex-col items-end">
+                <p class="text-6xl">Bericht</p>
+                <p class="text-xs text-red-700">Nr. SB-2026-0102</p>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-red-700 via-red-600 to-red-100 my-5" style="height: 3px;"></div>
+
+        <!-- Address Section -->
+        <div class="flex justify-between mb-5">
+            <div class="flex flex-col gap-2">
+                <p class="text-xs text-gray-500">Dachdecker Schmidt GmbH   •   Musterstraße 123  •  44263 Dortmund</p>
+                <p class="text-xs text-red-700" style="letter-spacing: 2px;">AUFTRAGGEBER</p>
+                <h2 class="text-m font-bold">Immobilien Verwaltung Dortmund GmbH</h2>
+                <p class="text-xs">Hauptstraße 45</p>
+                <p class="text-xs">Dortmund, 44135</p>
+            </div>
+            <div class="flex flex-col gap-2 items-end">
+                <p class="text-xs text-red-700" style="letter-spacing: 2px;">BEARBEITER / FIRMA</p>
+                <h2 class="text-m font-bold">{{name}}</h2>
+                <p class="text-xs">Sachverständigenbüro Nord</p>
+                <p class="text-xs">Dortmund</p>
+                <p class="text-xs">44263</p>
+            </div>
+        </div>
+
+        <!-- Info Bar -->
+        <div class="flex bg-black text-white rounded-[10px] m-5 mx-auto">
+            <div class="flex-1 text-center relative p-3">
+                <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">DATUM</p>
+                <h2 class="font-semibold text-sm">15.03.2026</h2>
+            </div>
+
+            <div class="flex-1 text-center relative p-3 before:content-[''] before:absolute before:left-0 before:top-[10%] before:h-[80%] before:w-px before:bg-white/30">
+                <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">STATUS</p>
+                <h2 class="font-semibold text-sm uppercase">In Bearbeitung</h2>
+            </div>
+
+            <div class="flex-1 text-center relative p-3 before:content-[''] before:absolute before:left-0 before:top-[10%] before:h-[80%] before:w-px before:bg-white/30">
+                <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">UHR</p>
+                <h2 class="font-semibold text-sm">14:30</h2>
+            </div>
+
+            <div class="flex-1 text-center relative p-3 before:content-[''] before:absolute before:left-0 before:top-[10%] before:h-[80%] before:w-px before:bg-white/30">
+                <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">SCHADENSOBJEKT</p>
+                <h2 class="font-semibold text-sm">Wohnhaus Müller</h2>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div>
+            <!-- Zusammenfassung -->
+            <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">ZUSAMMENFASSUNG</p>
+            <div class="bg-red-300 h-px"></div>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">Im Rahmen einer gutachterlichen Ortsbesichtigung mittels Drohne wurde die Dachfläche des Objekts einer Sichtprüfung unterzogen. Die Dacheindeckung (Betondachsteine) weist einen dem Alter entsprechenden, normalen Verwitterungszustand auf. Es wurden jedoch punktuelle, akute Schäden in Form von gerissenen Dachsteinen sowie ein massiver Substanzschaden an einem freiliegenden Holzbalken (Sparren-/Pfettenkopf) im Traufbereich festgestellt. Hier besteht zeitnaher Handlungsbedarf, um die Bausubstanz zu schützen und Folgeschäden zu vermeiden.</p>
+
+            <!-- Feststellungen Außen -->
+            <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">FESTSTELLUNGEN AUSSEN</p>
+            <div class="bg-red-300 h-px"></div>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">Im Rahmen einer gutachterlichen Ortsbesichtigung mittels Drohne wurde die Dachfläche des Objekts einer Sichtprüfung unterzogen. Die Dacheindeckung (Betondachsteine) weist einen dem Alter entsprechenden, normalen Verwitterungszustand auf. Es wurden jedoch punktuelle, akute Schäden in Form von gerissenen Dachsteinen sowie ein massiver Substanzschaden an einem freiliegenden Holzbalken (Sparren-/Pfettenkopf) im Traufbereich festgestellt. Hier besteht zeitnaher Handlungsbedarf, um die Bausubstanz zu schützen und Folgeschäden zu vermeiden.</p>
+
+            <!-- Feststellungen Innen -->
+            <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">FESTSTELLUNGEN INNEN</p>
+            <div class="bg-red-300 h-px"></div>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">Im Rahmen einer gutachterlichen Ortsbesichtigung mittels Drohne wurde die Dachfläche des Objekts einer Sichtprüfung unterzogen. Die Dacheindeckung (Betondachsteine) weist einen dem Alter entsprechenden, normalen Verwitterungszustand auf. Es wurden jedoch punktuelle, akute Schäden in Form von gerissenen Dachsteinen sowie ein massiver Substanzschaden an einem freiliegenden Holzbalken (Sparren-/Pfettenkopf) im Traufbereich festgestellt. Hier besteht zeitnaher Handlungsbedarf, um die Bausubstanz zu schützen und Folgeschäden zu vermeiden.</p>
+
+            <!-- Technische Bewertung -->
+            <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">TECHNISCHE BEWERTUNG</p>
+            <div class="bg-red-300 h-px"></div>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">Im Rahmen einer gutachterlichen Ortsbesichtigung mittels Drohne wurde die Dachfläche des Objekts einer Sichtprüfung unterzogen. Die Dacheindeckung (Betondachsteine) weist einen dem Alter entsprechenden, normalen Verwitterungszustand auf. Es wurden jedoch punktuelle, akute Schäden in Form von gerissenen Dachsteinen sowie ein massiver Substanzschaden an einem freiliegenden Holzbalken (Sparren-/Pfettenkopf) im Traufbereich festgestellt. Hier besteht zeitnaher Handlungsbedarf, um die Bausubstanz zu schützen und Folgeschäden zu vermeiden.</p>
+
+            <!-- Sofortmaßnahmen -->
+            <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">SOFORTMASSNAHMEN</p>
+            <div class="bg-red-300 h-px"></div>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">Im Rahmen einer gutachterlichen Ortsbesichtigung mittels Drohne wurde die Dachfläche des Objekts einer Sichtprüfung unterzogen. Die Dacheindeckung (Betondachsteine) weist einen dem Alter entsprechenden, normalen Verwitterungszustand auf. Es wurden jedoch punktuelle, akute Schäden in Form von gerissenen Dachsteinen sowie ein massiver Substanzschaden an einem freiliegenden Holzbalken (Sparren-/Pfettenkopf) im Traufbereich festgestellt. Hier besteht zeitnaher Handlungsbedarf, um die Bausubstanz zu schützen und Folgeschäden zu vermeiden.</p>
+
+            <!-- Empfohlene Instandsetzung -->
+             <div style="page-break-inside: avoid;">
+            <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">EMPFOHLENE INSTANDSETZUNG</p>
+            <div class="bg-red-300 h-px"></div>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">Im Rahmen einer gutachterlichen Ortsbesichtigung mittels Drohne wurde die Dachfläche des Objekts einer Sichtprüfung unterzogen. Die Dacheindeckung (Betondachsteine) weist einen dem Alter entsprechenden, normalen Verwitterungszustand auf. Es wurden jedoch punktuelle, akute Schäden in Form von gerissenen Dachsteinen sowie ein massiver Substanzschaden an einem freiliegenden Holzbalken (Sparren-/Pfettenkopf) im Traufbereich festgestellt. Hier besteht zeitnaher Handlungsbedarf, um die Bausubstanz zu schützen und Folgeschäden zu vermeiden.</p>
+</div>
+            <!-- Fotodokumentation -->
+            <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">FOTODOKUMENTATION</p>
+            <div class="bg-red-300 h-px"></div>
+            <div class="grid grid-cols-3 gap-2 py-2">
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img
+                        src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg"
+                        alt="Bild"
+                        class="w-full h-40 object-cover"
+                    />
+                    <div class="p-2 text-center">
+                        <h3 class="text-xs text-gray-500 text-left">Dachschaden Nordseite 1</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img
+                        src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg"
+                        alt="Bild"
+                        class="w-full h-40 object-cover"
+                    />
+                    <div class="p-2 text-center">
+                        <h3 class="text-xs text-gray-500 text-left">Dachschaden Nordseite 2</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img
+                        src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg"
+                        alt="Bild"
+                        class="w-full h-40 object-cover"
+                    />
+                    <div class="p-2 text-center">
+                        <h3 class="text-xs text-gray-500 text-left">Riss im Dachstein 3</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img
+                        src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg"
+                        alt="Bild"
+                        class="w-full h-40 object-cover"
+                    />
+                    <div class="p-2 text-center">
+                        <h3 class="text-xs text-gray-500 text-left">Holzbalken Traufbereich 4</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img
+                        src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg"
+                        alt="Bild"
+                        class="w-full h-40 object-cover"
+                    />
+                    <div class="p-2 text-center">
+                        <h3 class="text-xs text-gray-500 text-left">Dachübersicht Südseite 5</h3>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow">
+                    <img
+                        src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg"
+                        alt="Bild"
+                        class="w-full h-40 object-cover"
+                    />
+                    <div class="p-2 text-center">
+                        <h3 class="text-xs text-gray-500 text-left">Detailaufnahme Schaden 6</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
