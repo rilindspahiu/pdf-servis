@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bericht {{ $report->report_number ?? $reportNumber ?? 'SB-2026-0102' }}</title>
+    <title>Bericht {{report->report_number ?? reportNumber ?? 'SB-2026-0102'}}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
@@ -15,101 +15,90 @@
 <body>
 
     <div id="pdf" class="max-w-[800px]" style="font-family: 'Nunito', sans-serif;">
-        {{-- Header --}}
         <div class="flex flex-row justify-between">
             <img src="https://socialsizes.io/static/facebook-banner-size-e26971e1cc6384ea2e577f3fbc9a60e0.jpg" width="400px" />
             <div class="flex flex-col items-end">
                 <p class="text-6xl">Bericht</p>
-                <p class="text-xs text-red-700">Nr. {{ $reportNumber }}</p>
+                <p class="text-xs text-red-700">Nr. {{reportNumber}}</p>
             </div>
         </div>
 
         <div class="bg-gradient-to-r from-red-700 via-red-600 to-red-100 my-5" style="height: 3px;"></div>
 
-        {{-- Address Section --}}
         <div class="flex justify-between mb-5">
             <div class="flex flex-col gap-2">
-                <p class="text-xs text-gray-500">{{ address }}</p>
+                <p class="text-xs text-gray-500">{{address}}</p>
                 <p class="text-xs text-red-700" style="letter-spacing: 2px;">AUFTRAGGEBER</p>
-                <h2 class="text-m font-bold">{{ auftraggeberName }}</h2>
-                <p class="text-xs">{{ auftraggeberAddress }}</p>
-                <p class="text-xs">{{ auftraggeberCity }}, {{ auftraggeberPostcode }}</p>
+                <h2 class="text-m font-bold">{{auftraggeberName}}</h2>
+                <p class="text-xs">{{auftraggeberAddress}}</p>
+                <p class="text-xs">{{auftraggeberCity}}, {{auftraggeberPostcode}}</p>
             </div>
             <div class="flex flex-col gap-2 items-end">
                 <p class="text-xs text-red-700" style="letter-spacing: 2px;">BEARBEITER / FIRMA</p>
-                <h2 class="text-m font-bold">{{ bearbeiterName }}</h2>
-                <p class="text-xs">{{ bearbeiterAddress }}</p>
-                <p class="text-xs">{{ bearbeiterCity }}</p>
-                <p class="text-xs">{{ bearbeiterPostcode }}</p>
+                <h2 class="text-m font-bold">{{bearbeiterName}}</h2>
+                <p class="text-xs">{{bearbeiterAddress}}</p>
+                <p class="text-xs">{{bearbeiterCity}}</p>
+                <p class="text-xs">{{bearbeiterPostcode}}</p>
             </div>
         </div>
 
-        {{-- Info Bar --}}
         <div class="flex bg-black text-white rounded-[10px] m-5 mx-auto">
             <div class="flex-1 text-center relative p-3">
                 <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">DATUM</p>
-                <h2 class="font-semibold text-sm">{{ $date }}</h2>
+                <h2 class="font-semibold text-sm">{{date}}</h2>
             </div>
 
             <div class="flex-1 text-center relative p-3 before:content-[''] before:absolute before:left-0 before:top-[10%] before:h-[80%] before:w-px before:bg-white/30">
                 <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">STATUS</p>
-                <h2 class="font-semibold text-sm uppercase">{{ $status }}</h2>
+                <h2 class="font-semibold text-sm uppercase">{{status}}</h2>
             </div>
 
             <div class="flex-1 text-center relative p-3 before:content-[''] before:absolute before:left-0 before:top-[10%] before:h-[80%] before:w-px before:bg-white/30">
                 <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">UHR</p>
-                <h2 class="font-semibold text-sm">{{ $time }}</h2>
+                <h2 class="font-semibold text-sm">{{time}}</h2>
             </div>
 
             <div class="flex-1 text-center relative p-3 before:content-[''] before:absolute before:left-0 before:top-[10%] before:h-[80%] before:w-px before:bg-white/30">
                 <p class="text-[10px] text-gray-400" style="letter-spacing: 2px;">SCHADENSOBJEKT</p>
-                <h2 class="font-semibold text-sm">{{ $schadensObjekt }}</h2>
+                <h2 class="font-semibold text-sm">{{schadensObjekt}}</h2>
             </div>
         </div>
 
-        {{-- Content Sections --}}
         <div>
-            {{-- Zusammenfassung --}}
             <p class="title text-[12px] text-red-800 font-bold" style="letter-spacing: 2px;">ZUSAMMENFASSUNG</p>
             <div class="bg-red-300 h-px"></div>
-            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{ $zusammenfassung }}</p>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{zusammenfassung}}</p>
 
-            {{-- Feststellungen Außen --}}
             <p class="title text-[12px] text-red-800  font-bold" style="letter-spacing: 2px;">FESTSTELLUNGEN AUSSEN</p>
             <div class="bg-red-300 h-px"></div>
-            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{ $feststellungenAussen }}</p>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{feststellungenAussen}}</p>
 
-            {{-- Feststellungen Innen --}}
             <p class="title text-[12px] text-red-800  font-bold" style="letter-spacing: 2px;">FESTSTELLUNGEN INNEN</p>
             <div class="bg-red-300 h-px"></div>
-            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{ $feststellungenInnen }}</p>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{feststellungenInnen}}</p>
 
-            {{-- Technische Bewertung --}}
             <p class="title text-[12px] text-red-800  font-bold" style="letter-spacing: 2px;">TECHNISCHE BEWERTUNG</p>
             <div class="bg-red-300 h-px"></div>
-            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{ $technischeBewertung }}</p>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{technischeBewertung}}</p>
 
-            {{-- Sofortmaßnahmen --}}
             <p class="title text-[12px] text-red-800  font-bold" style="letter-spacing: 2px;">SOFORTMASSNAHMEN</p>
             <div class="bg-red-300 h-px"></div>
-            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{ $sofortmassnahmen }}</p>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{sofortmassnahmen}}</p>
 
-            {{-- Empfohlene Instandsetzung --}}
             <p class="title text-[12px] text-red-800  font-bold" style="letter-spacing: 2px;">EMPFOHLENE INSTANDSETZUNG</p>
             <div class="bg-red-300 h-px"></div>
-            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{ $empfohleneInstandsetzung }}</p>
+            <p class="text-[12px] py-2 whitespace-pre-wrap text-gray-700">{{empfohleneInstandsetzung}}</p>
 
-            {{-- Fotodokumentation --}}
             <p class="title text-[12px] text-red-800  font-bold" style="letter-spacing: 2px;">FOTODOKUMENTATION</p>
             <div class="bg-red-300 h-px"></div>
-```html
+            
 <div class="grid grid-cols-3 gap-2 py-2">
-    ${
+    {
         data.photos && data.photos.length
             ? data.photos.map((photo, index) => `
                 <div class="bg-white rounded-lg overflow-hidden shadow">
                     <img
-                        src="${
+                        src="{
                             typeof photo === 'object'
                                 ? (photo.image_url || photo.path || '')
                                 : photo
@@ -120,11 +109,11 @@
 
                     <div class="p-2 text-center">
                         <h3 class="text-xs text-gray-500 text-left">
-                            ${
+                            {
                                 typeof photo === 'object'
                                     ? (photo.title || 'Bild')
                                     : 'Bild'
-                            } ${index + 1}
+                            } {index + 1}
                         </h3>
                     </div>
                 </div>
@@ -136,7 +125,6 @@
             `
     }
 </div>
-```
 
         </div>
     </div>

@@ -10,7 +10,6 @@ function renderTemplate(templateName, data) {
     Object.keys(data).forEach((key) => {
         html = html.replaceAll(`{{${key}}}`, data[key]);
     });
-
     return html;
 }
 
