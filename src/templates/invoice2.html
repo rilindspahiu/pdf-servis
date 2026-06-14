@@ -101,20 +101,32 @@
             <div class="grid grid-cols-3 gap-2 py-2">
                 {{photos_grid}}
             </div>
-            <p class="text-gray-600">Mit freundlichen Grüßen</p>
-            <div class="grid grid-cols-6">
-                <div class="col-span-3">
 
-                    <img style="width:400px; height:auto;" src={{customer_signature}} alt="">
-                    <div class="bg-red-300 h-px"></div>
-                        <p class="text-center">Unterschift des Kunden</p>
-                </div>
-                <div class="col-span-3">
-                    <img style="width:400px; height:auto;" src={{technician_signature}} alt="">
-                                        <div class="bg-red-300 h-px"></div>
-                            <p>Techniker Unterschift</p>
+            <div class="break-inside-avoid">
+            <p class="text-gray-600 mt-6">Mit freundlichen Grüßen</p>
+<div style="display:flex; justify-content:space-between; margin-top:30px;">
 
-                </div>
+    <!-- Customer -->
+    <div style="text-align:center;">
+        <img style="width:200px; max-height:100px; object-fit:contain;"
+             src={{customer_signature}} />
+        <div style="width:200px; margin-top:10px;">
+            <div style="border-top:1px solid #000;"></div>
+            <p style="font-size:12px;">Unterschrift des Kunden</p>
+        </div>
+    </div>
+
+    <!-- Technician -->
+    <div style="text-align:center;">
+        <img style="width:200px; max-height:100px; object-fit:contain;"
+             src="" />
+        <div style="width:200px; margin-top:10px;">
+            <div style="border-top:1px solid #000;"></div>
+            <p style="font-size:12px;">Techniker Unterschrift</p>
+        </div>
+    </div>
+
+</div>
 </div>
             </div>
         </div>
