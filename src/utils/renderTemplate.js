@@ -23,7 +23,7 @@ function renderTemplate(templateName, data) {
                     <img
                         src="${imageUrl}"
                         alt="${title}"
-                        class="w-full h-40 object-cover"
+                        class="w-400 h-full object-cover"
                     />
                     <div class="p-2 text-center" style="font-family: 'Nunito', sans-serif;">
                         <h3 class="text-xs text-gray-500 text-left">
